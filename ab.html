@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="ab.css" />
+    <title>reservation</title>
+  </head>
+  <script>
+    function validateform(){ 
+    var fullname=document.myform.fullname.value;
+    var email = document.myform.email.value;
+    var address = document.myform.address.value;
+    var city = document.myform.city.value;
+    var state = document.myform.state.value;
+    var zipcode = document.myform.zipcode.value;
+    var nameoncard = document.myform.nameoncard.value;
+    var creditcardnumber = document.myform.creditcardnumber.value;
+    var expmonth = document.myform.expmonth.value;
+    var expyear = document.myform.expyear.value;
+    var cvv = document.myform.cvv.value;
+     if(fullname== null || fullname==""){
+      document.getElementById("full").innerHTML="please enter your full name";
+     }
+     if(email== null || email==""){
+      document.getElementById("a").innerHTML="please enter your email";
+     }
+     if(address== null || address==""){
+      document.getElementById("b").innerHTML="please enter your address";
+     }
+     if(city== null || city==""){
+      document.getElementById("b").innerHTML="please enter your city";
+     }
+     if(state== null || state==""){
+      document.getElementById("c").innerHTML="please enter your state";
+     }
+     if(zipcode== null || zipcode==""){
+      document.getElementById("d").innerHTML="please enter your zipcode";
+     }
+     if(nameoncard== null || nameoncard==""){
+      document.getElementById("e").innerHTML="please enter the name on the card";
+     }
+     if(creditcardnumber== null || creditcardnumber==""){
+      document.getElementById("f").innerHTML="please enter your credit card number";
+     }
+     if(expmonth== null || expmonth==""){
+      document.getElementById("g").innerHTML="please enter your card exp month";
+     }
+     if(expyear== null || expyear==""){
+      document.getElementById("h").innerHTML="please enter your card expyear";
+     }
+     if(cvv== null || cvv==""){
+      document.getElementById("i").innerHTML="please enter yur cvv";
+     }
+
+  }
+  </script>
+
+  <body>
+        <div class="container">
+          <div class="circle-container">
+            <div class="circle">
+              <button id="close">
+                <i class="fas fa-times"></i>
+              </button>
+              <button id="open">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="home.html" style="color: white; text-decoration:none"><i class="fas fa-home">Home</i> </li></a>
+              <li><a href="home.html" style="color: white; text-decoration:none"><i class="fas fa-user-alt"></i>about</li>
+              <li><a href="ab.html" style="color: white; text-decoration:none"><i class="fas fa-envelope"></i> Contact</li></a>
+            </ul>
+          </nav>  
+      <div class="content">
+        <div class="conta">
+          <form name="myform" action="ab.php" method="dialog" onsubmit="return validateform()" > 
+                <div class="row">
+                    <div class="col">
+                        <h3 class="title">billing address</h3>
+                        <div class="inputBox">
+                            full name :
+                            <input type="text"  name ="fullname" placeholder="Abel paulos">
+                            <p id="full" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>email :</span>
+                            <input type="email" placeholder="alphabus@onlinepay.com" name="email">
+                            <p id="a" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>address :</span>
+                            <input type="text" placeholder="room - street - locality" name="address">
+                            <p id="b" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>city :</span>
+                            <input type="text" placeholder="Adiss Ababa" name="city">
+                            <p id="c" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>state :</span>
+                                <input type="text" placeholder="Ethiopia" name="state">
+                                <p id="d" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                            </div>
+                            <div class="inputBox">
+                                <span>zip code :</span>
+                                <input type="text" placeholder="1000"  name="zipcode">
+                                <p id="e" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="col">
+        
+                        <h3 class="title">payment</h3>
+        
+                        <div class="inputBox">
+                            <span>cards accepted :</span>
+                            <img src="card_img.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>name on card :</span>
+                            <input type="text" placeholder="Abel paulos" name="nameoncard">
+                            <p id="f" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number :</span>
+                            <input type="number" placeholder="1111-2222-3333-4444" name="creditcardnumber">
+                            <p id="g" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>exp month :</span>
+                            <input type="text" placeholder="january" name="expmonth">
+                            <p id="h" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>exp year :</span>
+                                <input type="number" placeholder="2022" name="expyear">
+                                <p id="i" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="1234" name="cvv">
+                                <p id="i" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                            </div>
+                        </div>
+        
+                    </div>
+            
+                </div>
+        
+                <input type="submit" value="proceed to checkout" class="submit-btn">
+        
+            </form>
+        </div>
+    <script src="script.js"></script>
+  </body>
+</html>

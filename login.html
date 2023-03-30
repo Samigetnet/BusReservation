@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>login</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #322e4e;
+    background-image: linear-gradient( 135deg,#42275a  10%, #734b6d 100%);
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background:  linear-gradient( 135deg,#42275a  10%, #734b6d 100%);
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient( 135deg,#ddd12d  10%, #e9e511 100%);
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+button :hover{
+  color: #392055;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: #42275a;
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+.logo a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+}
+ 
+.container {
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  
+  min-height: 100vh;
+  padding: 50px;
+}
+ 
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+ 
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+ 
+.circle {
+  background-color: #762d92;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+ 
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+ 
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+ 
+.circle button:focus {
+  outline: none;
+}
+ 
+.circle button#open {
+  left: 10%;
+}
+ 
+.circle button#close {
+  top: 40%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+ 
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+ 
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+ 
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+nav ul  li  {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+nav ul  li a i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+ 
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+ 
+nav ul  li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+ 
+    </style>
+    <script>
+      function validateform(){ 
+        var username=document.myform.username.value;
+        var password=document.myform.password.value;
+         if(username== null || username==""){
+          document.getElementById("un").innerHTML="please enter your username";
+         }
+         if(password == null || password==""){
+          document.getElementById('pas').innerHTML="please enter your password"
+         }
+      }
+    
+
+    </script>
+</head>
+<body>
+  <section class="rotate">
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home">Home</i> </li></a>
+          <li><a href="homw.html" style="color: white; text-decoration: none;"><i class="fas fa-user-alt"></i> About</li></a>
+          <li><a href="contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</li></a>
+        </ul>
+      </nav>
+  </section>
+        <section>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="logo"><a href="#"><span style="color:#1845ad">Alpha</span><span style="color:#ff512f">bus</span></a></div>
+    <form name="myform" action="login.php" method="post" onsubmit="return validateform()" > 
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" name="username">
+        <p id="un" style="color: red; font: weight 6px; font-size: x-small;"></p>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" name="password">
+        <p id="pas" style="color: red; font: weight 6px; font-size: x-small;" ></p>
+
+        <button>Log In</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </form>
+  </section>
+  <script>
+      const open = document.getElementById('open')
+const close = document.getElementById('close')
+const container = document.querySelector('.container')
+ 
+open.addEventListener('click', () => container.classList.add('show-nav'))
+ 
+close.addEventListener('click', () => container.classList.remove('show-nav'))
+              
+  </script>
+</body>
+</html>

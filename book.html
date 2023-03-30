@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="book.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<script>
+   function validateform(){
+    var firstname = document.myform.firstname.value;
+    var lastname = document.myform.lastname.value;
+    var address = document.myform.address.value;
+    var city = document.myform.city.value;
+    var date = document.myform.date.value;
+    var sameadr = document.myform.sameadr.value;
+         if(firstname == null || firstname ==""){
+          document.getElementById('fn').innerHTML="* please enter your firstname";
+         }
+         if(lastname == null || lastname == ""){
+          document.getElementById('ln').innerHTML="* please enter your lastname";
+         }
+         if(address == null || address == ""){
+          document.getElementById('ad').innerHTML="*please enter your address";
+         }
+         if(city == null || city ==""){
+          document.getElementById('cc').innerHTML="*please enter your city";
+         }
+         if(date == null || date ==""){
+          document.getElementById('dd').innerHTML="*please enter the date";
+         }
+         if(date == null || date ==""){
+          document.getElementById("dd").innerHTML="*please enter the date";
+         }
+         if(sameadr == null || sameadr ==""){
+          alert("please check our terms and privacy");
+         }
+   }
+  
+</script>
+<body >
+  <section class="rotate">
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home">Home</i> </li></a>
+          <li><i class="fas fa-user-alt"></i> About</li>
+          <li><i class="fas fa-envelope"></i> Contact</li>
+        </ul>
+      </nav>
+  </section>
+<div class="row">
+  <div class="col-75">
+    <div class="container1">
+      <form name="myform" action="book.php" method="post" onsubmit="return validateform()" > 
+        <div class="row">
+          <div class="col-50">
+            <h3>Booking address</h3>
+            <label for="fname"><i class="fa fa-user"></i> First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Abraham">
+            <p id="fn" style="color: red; font: weight 6px; font-size: x-small;"></p>
+            <label for="email"><i class="fa fa-user"></i>Last name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Shiferaw">
+            <p id="ln" style="color: red; font: weight 6px; font-size: x-small;"></p>
+            <label for="adr"><i class="fa fa-address-card-o"></i>leaving from</label>
+            <input type="text" id="adr" name="address" placeholder="Adiss ababa">
+            <p id="ad" style="color: red; font: weight 6px; font-size: x-small;"></p>
+            <label for="city"><i class="fa fa-institution"></i>Destination</label>
+            <input type="text" id="city" name="city" placeholder="bahidar">
+            <p id="cc" style="color: red; font: weight 6px; font-size: x-small;"></p>
+            <label for="city"><i class="fa fa-calendar"></i>Leaving Date</label>
+            <input type="date" id="date" name="date" placeholder="">
+            <p id="dd" style="color: red; font: weight 6px; font-size: x-small;"></p>
+            <label for="city"><i class="fa fa-calendar"></i>Return date</label>
+            <input type="date" id="date" name="date" placeholder="bahidar">
+            <p id="dd" style="color: red; font: weight 6px; font-size: x-small;"></p>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Accept terms & privacy
+          <p id="gd"></p>
+        </label>
+        <input type="submit" value="get my ticket" class="btn">
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+<script>
+  const open = document.getElementById('open')
+const close = document.getElementById('close')
+const container = document.querySelector('.container')
+
+open.addEventListener('click', () => container.classList.add('show-nav'))
+
+close.addEventListener('click', () => container.classList.remove('show-nav'))
+          
+</script>
+</body>
+</html>

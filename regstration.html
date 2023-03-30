@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration</title>
+    <script>
+function validateform(){  
+    var name=document.myform.name.value;  
+    var email=document.myform.email.value;
+    var password=document.myform.password.value;
+    var confirmpassword=document.myform.confirmpassword.value;
+    var check=document.myform.check.value;
+    if (name==null || name==""){  
+        document.getElementById('bb').innerHTML="*please enter your fullname";   
+      return false;  
+    }
+    if (email==null || email==""){  
+        document.getElementById('cc').innerHTML="*please enter your email";   
+      return false;  
+    }
+    if (password==null || password==""){  
+        document.getElementById('dd').innerHTML="*please create your password";   
+      return false;  
+    }
+    if (confirmpassword==null || confirmpassword==""){  
+        document.getElementById('ee').innerHTML="*please confirm your password";   
+      return false;  
+    }
+    if(password !==confirmpassword){
+      document.getElementById('ff').innerHTML="*yourpassword must be the same";
+    }
+    if (check==null || check==""){
+      document.getElementById('gg').innerHTML="*to register you need to accept out terms and privacy";
+    }
+  }
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home">Home</i> </li></a>
+          <li><a href="home.html" style="text-decoration: none;"><i class="fas fa-user-alt"></i> About</li></a>
+          <li><a href="index.html" style="text-decoration: none;"><i class="fas fa-envelope"></i> Contact</li></a>
+        </ul>
+      </nav>
+      <div class="content">
+        <p >
+          <div class="background">
+              <div class="shape"></div>
+              <div class="shape"></div>
+          </div>
+          
+          <div class="wrapper">
+            <h2>Registration</h2>
+            <form name="myform" action="kk.php" method="post" onsubmit="return validateform()" > 
+              <div class="input-box">
+                <input type="text" placeholder="Enter Your Name" name="name" >
+                <p id="bb" style="color: red; font: weight 6px; font-size: x-small;"></p>
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter Your Email" name="email">
+                <p id="cc" style="color: red; font: weight 6px; font-size: x-small;"></p>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Create password" name="password" >
+                <p id="dd" style="color: red; font: weight 6px; font-size: x-small;"></p>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Confirm password" name="confirmpassword" >
+                <p id="ee" style="color: red; font: weight 6px; font-size: x-small;"></p>
+                <p id="ff" style="color: red; font: weight 6px; font-size: x-small;"></p>
+              </div>
+              <div class="policy">
+                <input type="checkbox" name="check">
+                <h3>I Accept all terms & Condition</h3>
+                <p id="gg"></p>
+              </div>
+              <div class="input-box button">
+                  <input type="submit" name="submit" value="Register Now">
+              </div>
+              <div class="text">
+                <h3>Alredy have an Account? <a href="#">Login Now</a></h3>
+              </div>
+            </form>
+          </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

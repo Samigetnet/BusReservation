@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+   </head>
+<body>
+  
+  <div class="mf-social-side-list">
+    <ul> 
+    <li>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </li>
+    <li>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </li>
+    </ul>
+    </div>
+    <br>
+  
+  <header class="hello">
+    <nav class="navbar">
+      <div class="logo"><a href="#">Alpha<span style="color:#eeeb43">bus</span></a></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="book.html">Booking</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="ab.html">payment</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="login.html"><input type="button" value="Login"></a>
+        <a href="regstration.html"><input type="button" value="sign up"></a>
+      </div>
+    </nav>
+    <div class="gif">
+        <img src="gf.gif" alt="HTML5 Icon" style="width:600px;height:600px;">
+      </div> 
+    <div class="container">
+        <span class="text first-text">We are</span>
+        <span class="text sec-text">Freelancer</span>
+    </div>
+
+    <script>
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Homley";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Safe";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Fast";
+            }, 8000); 
+        }
+
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>   
+    
+    <div class="text-content">
+      
+        <p><q>It's kind of beautiful to sit inside a bus and see a city from the windows.</q></p>
+      </div>
+      <br>
+      <div class="newslatter">
+        <form>
+            <input type="text" name="email" id="mail" placeholder="Search My bus...">
+            <input type="submit" name="submit" value="Search">
+        </form>
+    </div>
+  </header>
+
+</section>
+  
+  <section class="cards" id="services">
+    <div class="header">
+      <p style="color: black;">With Alphabus, travellers can book bus tickets online at the lowest
+         ticket fares. Travellers prefer to choose their favorite bus to reserve online bus booking.
+          You’re at the right place to find a wide range of Private
+         buses and SRTC (State Road Transport Corporation) buses are available for bus booking online on Alphabus.</p>
+    </div>
+    <div class="row1-container">
+      <div class="box box-down cyan">
+        <h2 style="color: cyan;">24/7 Customer Assistance</h2>
+        <p>we will there for you 24 hours in a day and 7 days in a week</p>
+        <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+      </div>
+  
+      <div class="box red">
+        <h2 style="color: red;">Safe-T Bus Partners</h2>
+        <p>make a partner the safeist place </p>
+        <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+      </div>
+  
+      <div class="box box-down blue">
+        <h2 style="color: blue;">Lowest Bus Ticket Price Assured</h2>
+        <p>there will be low bus ticket price it on your finance </p>
+        <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+      </div>
+    </div>
+    <div class="row2-container">
+      <div class="box orange">
+        <h2 style="color: orange;">Free Cancellation</h2>
+        <p>Regularly you can cancell  what you Reserved</p>
+        <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="tm">
+    <h1>This is the right place  to sit inside the bus and watch the city.</h1>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img src="44.gif"/>
+          <div>
+            login/sign up
+          </div>
+        </div>
+        <div class="timeline-content">
+          <h2>Journey Start <span>(Home)</span></h2>
+          <p>Enter the Source and Destination details in the “leaving from” and “Going to” tab respectively
+            Select the “Journey date” from calendar icon and click on the “Search” button<button type="button" class="visit">Visit ›</button><img src="stylesheet/images/cities/delhi.svg"/></p>
+          <br>
+          <i class="fas fa-location-arrow fa-icon"></i>
+        </div>
+      </div>
+    
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img src="ticket.gif" style="width: 300px; height: 300px; margin-top: 20%;"/>
+          <div>
+            payment
+          </div>
+        </div>
+        <div class="timeline-content">
+          <h2>Select your fav bus<span>(already there)</span></h2>
+          <p>Select any bus operator of your choice from the list of buses which are displayed
+            Select a seat, boarding and dropping points and hit “Continue to payment”<button type="button" class="visit">Visit ›</button><img src="stylesheet/images/cities/lucknow.svg"/></p>
+          
+          <br>
+          <i class="fas fa-bus fa-icon"></i>
+        </div>
+      </div>
+    
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img src="travel.gif"/>
+          <div>
+         get your ticket
+          </div>
+        </div>
+        <div class="timeline-content">
+          <h2>your detail<span>(destination)</span></h2>
+          <p>Enter all the required information including contact number & passenger details
+            Complete the payment process be selecting your mode of payment<button type="button" class="visit">Visit ›</button><img src="stylesheet/images/cities/prayagraj.svg"/></p>
+          
+          <br>
+          <i class="fas fa-street-view fa-icon"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-83834093-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </section>
+   <section id="about-section">
+    <div class="about-left">
+        <img src="about.gif" width="350px" />
+    </div>
+    <div class="about-right">
+        <h4>Alphabus</h4>
+        <h1>About Us</h1>
+        <p>
+          alphabus is Ethiopians largest online bus ticket
+          booking service trusted by over millions of happy customers locally. 
+          alphabus offers bus ticket booking through its website,iOS and Android
+          mobile apps for all major routes.
+        </p>
+        <div class="address">
+            <ul>
+                <li>
+                    <span class="address-logo">
+                        <i class="fas fa-paper-plane"></i>
+                    </span>
+                    <p>Address</p>
+                    <span class="saprater">:</span>
+                    <p>Adiss Ababa, Bahirdar , Diredawa</p>
+                </li>
+                <li>
+                    <span class="address-logo">
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                    <p>Phone No</p>
+                    <span class="saprater">:</span>
+                    <p>+251-123-432-322</p>
+                </li>
+                <li>
+                    <span class="address-logo">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                    <p>Email ID</p>
+                    <span class="saprater">:</span>
+                    <p>alphabus@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <div class="expertise">
+            <h3>Follow us on</h3>
+            <ul>
+                <li>
+                    <span class="expertise-logo">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+                    <p>Facebook</p>
+                </li>
+                <li>
+                    <span class="expertise-logo">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                    <p>Instagram</p>
+                </li>
+                <li>
+                    <span class="expertise-logo">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <p>twitter</p>
+                </li>
+                <li>
+                    <span class="expertise-logo">
+                        <i class="fab fa-skype"></i>
+                    </span>
+                    <p>skype</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+  <section class="last">
+    <footer>
+      <div class="footer-gray">
+        <div class="footer-custom">
+          <div class="footer-lists">
+            <div class="footer-list-wrap">
+              <h6 class="ftr-hdr">Alphabus</h6>
+              <ul class="ftr-links-sub">
+                <li>+25911187342</li>
+              </ul>
+              <h6 class="ftr-hdr">Office</h6>
+              <ul class="ftr-links-sub">
+                <li><a href="#" rel="nofollow">Adiss Ababa</a></li>
+                <li><a href="#" rel="nofollow">Bahirdar</a></li>
+                <li><a href="#" rel="nofollow">Adama</a></li>
+                <li><a href="#" rel="nofollow">Mekelle</a></li>
+                <li><a href="#" rel="nofollow">jigjiga</a></li>
+                <li><a href="#" rel="nofollow">Diredwa</a></li>
+              </ul>
+            </div>
+            <div class="footer-list-wrap">
+              <h6 class="ftr-hdr">Customer Service</h6>
+              <ul class="ftr-links-sub">
+                <li><a href="contact.html" rel="nofollow">Contact Us</a></li>
+                <li><a href="#.html" rel="nofollow">Booking</a></li>
+                <li><a href="#.html" rel="nofollow">Offers</a></li>
+                <li><a href="#.html" rel="nofollow">Special buses</a></li>
+                <li><a href="#.html" rel="nofollow">Gift Cards</a></li>
+                <li><a href="#.html" rel="nofollow">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="footer-list-wrap">
+              <h6 class="ftr-hdr">About Us</h6>
+              <ul class="ftr-links-sub">
+                <li><a href="#.html" rel="nofollow">Our Company</a></li>
+                <li><a href="#.html" rel="nofollow">T & C</a></li>
+                <li><a href="#.html" rel="nofollow">Privacy Policy</a></li>
+                <li><a href="#.html" rel="nofollow">Cookie Policy</a></li>
+                <li><a href="#.html" rel="nofollow">FAQs</a></li>
+                <li><a href="#.html" rel="nofollow"><strong>Blog</strong></a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-list-wrap">
+              <h6 class="ftr-hdr">My Account</h6>
+              <ul class="ftr-links-sub">
+                <art:content rule="!loggedin">
+                  <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+                  <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track My Ticket</span></li>
+                </art:content>
+                <art:content rule="loggedin">
+                  <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+                  <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">Track My Ticket</span></li>
+                </art:content>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-email">
+            <h6 class="ftr-hdr">Sign up for exclusive offers</h6>
+            <div id="ftr-email" class="ftr-email-form">
+              <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
+                <div class="error">Please enter a valid email address</div>
+                <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+
+                <input type="submit" class="button" value="SUBMIT" />
+                <input type="hidden" name="country_iso2" value="">
+                <input type="hidden" name="language_iso2" value="en">
+                <input type="hidden" name="site_domain" value="art.com">
+                <input type="hidden" name="email_acq_source" value="01-000001">
+                <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
+                <input type="hidden" name="brand_id" value="ART">
+                <input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
+              </form>
+            </div>
+            <div class="ftr-email-privacy-policy"></div>
+          </div>
+          <div class="footer-social">
+            <h6 class="ftr-hdr">Follow Us</h6>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+                  <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+                  <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                </a>
+              </li>
+              <li>
+                <a href="https://pinterest.com/artdotcom/" target="_blank">
+                  <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="http://instagram.com/artdotcom/">
+                  <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+                  <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-legal">
+            <p>&copy; applications.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+            <p>Alphabus.com, You+alpha, and Photos [to] alphas are trademarks or registered trademarks of Alphabus.com Inc.</p>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+ </section>
+</section>
+<script>
+  var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+</script>
+<a href="#" class="top">Back to Top &#8593;</a>
+</body>
+</html>

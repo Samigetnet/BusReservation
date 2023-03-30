@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(135deg, #42275a 10%, #734b6d 100%);
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-image:linear-gradient(135deg, #42275a 10%, #734b6d 100%);
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #1DBF73;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.conta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient();
+}
+
+.conta form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.conta form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.conta form .row .col{
+  flex:1 1 250px;
+}
+
+.conta form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.conta form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.conta form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.conta form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.conta form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.conta form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.conta form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.conta form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.conta form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background:  linear-gradient( 135deg,#42275a  10%, #734b6d 100%);;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.conta form .submit-btn:hover{
+  background: linear-gradient(rgb(36, 36, 85),rgb(207, 207, 37));
+}
+.container {
+    background-image: linear-gradient(white);
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+  }
+  
+  .container.show-nav {
+    transform: rotate(-20deg);
+  }
+  
+  .circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+  }
+  
+  .circle {
+    background-color: #bfbc1d;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    position: sticky;
+    transition: transform 0.5s linear;
+  }
+  
+  .container.show-nav .circle {
+    transform: rotate(-70deg);
+  }
+  
+  .circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+  }
+  
+  .circle button:focus {
+    outline: none;
+  }
+  
+  .circle button#open {
+    left: 60%;
+  }
+  
+  .circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+  }
+  
+  .container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  
+ 
